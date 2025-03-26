@@ -17,18 +17,16 @@ export default function Footer() {
                 <span>abv@.abv</span>
                 </div>
                 <div className="footer-social">
-                    <span>instagram</span>
-                    <span>facebook</span>
-                    <span>email</span>
+                  <Link className="header-nav-a instagram"></Link>
+                  <Link className="header-nav-a facebook"></Link>
+                  <Link className="header-nav-a email"></Link>
                 </div>
             </div>
             <div className="footer-nav">
             <ul>
-                    <li><Link className="footer-nav-a" to={'/'}>Services</Link></li>
+                    <li><Link className="footer-nav-a" to={'/services'}>Services</Link></li>
                     <li><Link className="footer-nav-a" to={'/'}>Contacts</Link></li>
-                    <li><Link className="footer-nav-a" to={'/'}>facebook</Link></li>
-                    <li><Link className="footer-nav-a" to={'/'}>instagram</Link></li>
-                    <li><Link className="footer-nav-a" to={'/'}>mail</Link></li>
+                    <li><Link className="footer-nav-a" to={'/'}>Policies</Link></li>
                     <li className="booknow"><Link className="footer-nav-a" to={'/'}>book now</Link></li>
                 </ul>
             </div>

@@ -13,13 +13,12 @@ export default function Header() {
                 <ul>
                     <li><Link className="header-nav-a" to={'/services'}>Services</Link></li>
                     <li><Link className="header-nav-a" to={'/'}>Contacts</Link></li>
-                    <li><Link className="header-nav-a" to={'/'}>facebook</Link></li>
-                    <li><Link className="header-nav-a" to={'/'}>instagram</Link></li>
-                    <li><Link className="header-nav-a" to={'/'}>email</Link></li>
+                    <li><Link className="header-nav-a instagram" to={'/'}></Link></li>
+                    <li><Link className="header-nav-a facebook" to={'/'}></Link></li>
+                    <li><Link className="header-nav-a email" to={'/'}></Link></li>
                     <li className="booknow"><Link className="header-nav-a" to={'/'}>book now</Link></li>
                 </ul>
             </div>
         </div>
-
     )
 }

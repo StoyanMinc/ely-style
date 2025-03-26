@@ -17,10 +17,23 @@
     font-size: 14px;
 }
 
+.header-nav-holder ul {
+    display: flex;
+    align-items: center;
+}
+
 .header-nav-holder li {
     display: inline-block;
     margin-left: 20px;
     text-transform: uppercase;
+}
+
+.header-icon {
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .booknow {
@@ -45,4 +58,37 @@
 
 .header-nav-a:hover::after {
     transform: scaleX(1); /* Expand underline smoothly */
+}
+
+.header-nav-a.instagram::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/src/assets/instagram.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-nav-a.facebook::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/src/assets/facebook.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header-nav-a.email::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/src/assets/mail.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }

@@ -25,6 +25,12 @@
     text-decoration: underline;
 }
 
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
 a {
     text-decoration: none;
     color: #000;
