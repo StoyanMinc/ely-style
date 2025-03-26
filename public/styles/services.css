@@ -1,0 +1,22 @@
+.services-container {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
+    padding: 50px;
+}
+
+.services-nav {
+    display: flex;
+    width: 88%;
+    background-color: red;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.services-nav-holder {
+    display: flex;
+    width: calc(50% - 10px);
+    background-color: green;
+}

@@ -1,15 +1,15 @@
 .header-container {
     display: flex;
-    width: 85%;
+    width: 88%;
     height: 80px;
-    margin: auto;
+    margin: 8px auto;
     justify-content: space-between;
     align-items: center;
-    background-color: red;
 }
 
 .logo-holder {
     text-align: center;
+    font-size: 19px;
 }
 
 .header-nav-holder {
@@ -27,24 +27,10 @@
     border: 2px solid #000;
     padding: 10px;
     font-size: 16px;
+    text-transform: uppercase;
 }
 
-/* a {
-    text-decoration: none;
-    color: #000;
-}
-
-a:hover {
-    text-decoration: underline;
-} */
-
-a {
-    text-decoration: none;
-    color: #000;
-    position: relative;
-}
-
-a::after {
+.header-nav-a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -57,7 +43,6 @@ a::after {
     transition: transform 0.3s ease-in-out;
 }
 
-a:hover::after {
+.header-nav-a:hover::after {
     transform: scaleX(1); /* Expand underline smoothly */
 }
-
