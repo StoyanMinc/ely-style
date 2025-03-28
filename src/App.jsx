@@ -3,6 +3,7 @@ import Header from "./components/header/Header"
 import Home from "./components/home/Home"
 import Footer from "./components/footer/Footer"
 import Services from "./components/services/Services"
+import Manicures from "./components/manicures/Manicures"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/services/manicures" element={<Manicures />} />
                 </Routes>
             </main>
 

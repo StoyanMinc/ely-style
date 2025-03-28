@@ -111,3 +111,59 @@
     font-size: 3em;
     letter-spacing: 1px;
 }
+
+.manicures-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.manicures-container h1 {
+    font-size: 4em;
+    font-weight: 100;
+}
+
+.manicures-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+    /* padding: 100px; */
+    text-align: center;
+}
+
+.manicures-container p,
+.manicures-container span {
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+   
+}
+
+.first-section p {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.first-section span {
+    font-weight: 600;
+}
+
+.first-section a {
+    margin-top: 20px;
+}
+
+.manicures-prices {
+    background-color: lightgray;
+    padding: 50px;
+}
+
+.manicures-prices h2 {
+    font-size: 3em;
+    font-family: italiana-regular;
+    font-weight: 100;
+}
