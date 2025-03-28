@@ -27,7 +27,7 @@ export default function Footer() {
                     <li><Link className="footer-nav-a" to={'/services'}>Services</Link></li>
                     <li><Link className="footer-nav-a" to={'/'}>Contacts</Link></li>
                     <li><Link className="footer-nav-a" to={'/'}>Policies</Link></li>
-                    <li className="booknow"><Link className="footer-nav-a" to={'/'}>book now</Link></li>
+                    {/* <li className="booknow"><Link className="footer-nav-a" to={'/'}>book now</Link></li> */}
                 </ul>
             </div>
         </div>

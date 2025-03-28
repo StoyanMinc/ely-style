@@ -5,8 +5,8 @@ export default function Header() {
         <div className="header-container">
             <div className="logo-holder">
                 <Link to={'/'}>
-                    <h2>NAIL SPA</h2>
-                    <p>Eli Style</p>
+                    <h2>Ely Style</h2>
+                    <span>Nail spa & more</span>
                 </Link>
             </div>
             <div className="header-nav-holder">

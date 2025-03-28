@@ -12,6 +12,17 @@
     font-size: 19px;
 }
 
+.logo-holder h2 {
+    font-size: 1.8em;
+    font-family: italiana-regular;
+    text-transform: uppercase;
+}
+
+.logo-holder span {
+    font-family: 'Montserrat';
+    font-size: 0.6em;
+    text-transform: uppercase;
+}
 .header-nav-holder {
     background-color: white;
     font-size: 14px;

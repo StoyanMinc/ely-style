@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer"
 import Services from "./components/services/Services"
 import Manicures from "./components/manicures/Manicures"
 import Pedicures from "./components/pedicures/Pedicures"
+import NailArtDesigns from "./components/nail-art-designs/NailArtDesigns"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/services" element={<Services />} />
                     <Route path="/services/manicures" element={<Manicures />} />
                     <Route path="/services/pedicures" element={<Pedicures />} />
+                    <Route path="/services/nail-art-designs" element={<NailArtDesigns />} />
                 </Routes>
             </main>
 

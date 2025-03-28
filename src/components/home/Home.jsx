@@ -24,22 +24,21 @@ export default function Home() {
         return () => clearInterval(interval); // Cleanup interval when the component unmounts
     }, []);
 
-    const displayedImages = [
-        images[(imageIndex + 0) % images.length],
-        images[(imageIndex + 1) % images.length],
-        images[(imageIndex + 2) % images.length],
-        images[(imageIndex + 3) % images.length]
-    ];
+    // const displayedImages = [
+    //     images[(imageIndex + 0) % images.length],
+    //     images[(imageIndex + 1) % images.length],
+    //     images[(imageIndex + 2) % images.length],
+    //     images[(imageIndex + 3) % images.length]
+    // ];
 
-    console.log(images);
     return (
         <div className="home-container">
             <section className="welcome-message-section">
                 <div className="welcome-message-holder">
-                    <span>SELF-LOVE</span>
-                    <h1>Bringing fashion <br /> to your <br />fingertips.</h1>
+                    <span>love-your-self</span>
+                    <h1> Bring fashion <br /> to your <br />fingertips.</h1>
                     <div className="booknow">
-                        <Link className="header-nav-a">book an appointment</Link>
+                        <Link className="header-nav-a">запази час</Link>
                     </div>
                 </div>
             </section>
@@ -69,7 +68,7 @@ export default function Home() {
                         style={{ transform: `translateX(-${imageIndex * 25}%)` }}
                     >
                         {images.map((image, index) => {
-                            return (<div className="image-card">
+                            return (<div key={index} className="image-card">
                                 <img src={image} alt={`Slide ${index + 1}`} />
                             </div>)
 

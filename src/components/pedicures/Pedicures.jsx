@@ -6,7 +6,6 @@ export default function Pedicures() {
             <section className="first-section">
                 <h1>Pedicures</h1>
                 <span>a warm sea salt soak, trimming, shaping, filing, buffing, cuticle maintenance, removeal of rough dead skin, steamed hot towel cleanse, exfoliating scrub & hydrating lotion.</span>
-               <Link className="booknow header-nav-a" to={'/'}>book a visit</Link>
             </section>
             <section className="pedicures-prices">
                 <h2>The Basics</h2>
@@ -22,6 +21,7 @@ export default function Pedicures() {
                 <p>Hot stone pedicure | $47</p>
                 <p>Signature spa pedicure | $53</p>
             </section>
+            <Link className="booknow header-nav-a" to={'/'}>book a visit</Link>
         </div>
     )
 }
