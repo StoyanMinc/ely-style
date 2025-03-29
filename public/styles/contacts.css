@@ -1,0 +1,37 @@
+.contacts-container {
+    display: flex;
+    width: 88%;
+    margin: 50px auto;
+    gap: 100px;
+}
+
+.contacts-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+}
+
+.contacts-info p, h3,
+.contacts-hours p,
+.google-maps p{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+}
+
+.contacts-container h1 {
+    font-size: 4em;
+    font-weight: 400;
+}
+
+.contacts-info,
+.contacts-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    line-height: 25px;
+}
+
+.google-maps {
+    width: 50%;
+}

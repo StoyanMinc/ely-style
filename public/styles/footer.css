@@ -25,10 +25,9 @@
     text-decoration: underline;
 }
 
-.footer-social {
-    display: flex;
-    gap: 15px;
-    margin-top: 5px;
+.footer-social li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 a {

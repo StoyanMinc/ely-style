@@ -11,7 +11,7 @@ export default function Services() {
                 <div className="services-nav-holder service-manicure"><Link to={'/services/manicures'} className="service-title">Manicures</Link></div>
                 <div className="services-nav-holder service-pedicure"><Link to={'/services/pedicures'} className="service-title">Pedicures</Link></div>
                 <div className="services-nav-holder service-manicure-art"><Link to={'/services/nail-art-designs'} className="service-title">Nails Art <span className="ampersand"></span> Desings</Link></div>
-                <div className="services-nav-holder service-beauty"><Link className="service-title">Beauty</Link></div>
+                <div className="services-nav-holder service-beauty"><Link to={'/services/beauty'} className="service-title">Beauty</Link></div>
             </section>
             <section className="services-comment">
                 <div className="services-image-holder"></div>

@@ -1,0 +1,116 @@
+.beauty-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+    gap: 100px;
+}
+
+.beauty-container section {
+    display: flex;
+    width: 88%;
+    /* height: calc(100vh - 80px); */
+    margin: auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-image: url('../images/home-manicure.jpg'); */
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; */
+}
+
+.beauty-title-section {
+    background-image: url('/images/beautybackgroundsection.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: end;
+}
+
+.beauty-title-holder {
+    width: 40%;
+    font-size: 3em;
+    color: #fff;
+    margin: 40px 70px;
+    text-align: end;
+}
+
+.beauty-title-holder h2 {
+    font-family: italiana-regular;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.beauty-services-section {
+    gap: 10px;
+}
+
+.service-option {
+    width: 33%;
+}
+
+/* TODO FIX THIS! */
+.image-holder {
+    width: 100%;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.service-options-info {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+}
+.service-option h3 {
+    font-family: italiana-regular;
+    font-size: 2em;
+    font-weight: 300;
+    padding: 20px 0;
+}
+
+.lash-extension-title {
+    border-bottom: 1px solid #000;
+}
+
+.service-option p {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.lash-holder {
+border-bottom: 1px solid #000;
+}
+
+.lash-option-holder {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.lash-options {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.active-lash-option {
+    opacity: 1;
+    max-height: 200px; /* Adjust this value based on content height */
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+.choose-lash-option-btn {
+    font-size: 30px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
