@@ -44,7 +44,6 @@ a {
 }
 
 .footer-nav li {
-    /* display: inline-block; */
     margin-left: 20px;
     text-transform: uppercase;
 }
@@ -60,18 +59,14 @@ a {
     position: absolute;
     left: 0;
     bottom: -2px;
-    /* Adjust underline position */
     width: 100%;
     height: 2px;
     background-color: currentColor;
-    /* Matches text color */
     transform: scaleX(0);
-    /* Initially hidden */
     transform-origin: left;
     transition: transform 0.3s ease-in-out;
 }
 
 .footer-nav-a:hover::after {
     transform: scaleX(1);
-    /* Expand underline smoothly */
 }

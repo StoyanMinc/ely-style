@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Pedicures() {
-    return( 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    return (
         <div className="pedicures-container">
             <section className="first-section">
                 <h1>Pedicures</h1>

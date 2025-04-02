@@ -68,12 +68,12 @@
 
 .ampersand {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(/src/assets/ampersand.svg);
+    background-image: url('/assets/ampersand.svg');
 }
 
 .services-comment {

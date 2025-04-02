@@ -57,7 +57,7 @@ export default function Home() {
                         <span>paraffin & more!</span>
                     </div>
                     <div className="booknow">
-                        <Link className="header-nav-a">See more</Link>
+                        <Link to={'/services/pedicures'} className="header-nav-a">See more</Link>
                     </div>
                 </div>
             </section>

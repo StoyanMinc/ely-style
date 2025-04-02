@@ -39,6 +39,11 @@
     text-transform: uppercase;
 }
 
+.nav-icons-container {
+    display: flex;
+    align-items: center;
+}
+
 .header-icon {
     width: 15px;
     height: 15px;
@@ -76,7 +81,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('/src/assets/instagram.svg');
+    background-image: url('/assets/instagram.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -87,7 +92,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('/src/assets/facebook.svg');
+    background-image: url('/assets/facebook.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -98,8 +103,13 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-image: url('/src/assets/mail.svg');
+    background-image: url('/assets/mail.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.burger-menu {
+    display: none;
+}
+
