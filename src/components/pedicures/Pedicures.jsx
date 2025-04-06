@@ -1,10 +1,9 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import useScrollToTop from "../../hooks/useScroll";
+
 export default function Pedicures() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+   useScrollToTop();
     return (
         <div className="pedicures-container">
             <section className="first-section">

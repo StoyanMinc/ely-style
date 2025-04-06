@@ -99,41 +99,30 @@ h1, p {
 .slideshow-container {
     position: relative;
     width: 100%;
-    /* Take the full width */
     overflow: hidden;
-    /* Hide images outside the container */
 }
 
 .image-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: 100%;
-    /* Ensure it takes full width of the parent */
     flex-direction: row;
-    /* Ensure items are laid out horizontally */
 }
 
 .image-card {
     min-width: 25%;
-    /* Show 4 images at once */
     height: 300px;
-    /* Set a fixed height for the images */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Hide overflow to ensure clean edges */
 }
 
 .image-card img {
     width: 100%;
-    /* Ensure the image fills the card width */
     height: 100%;
-    /* Ensure the image fills the card height */
     object-fit: cover;
-    /* Make sure the image covers the container area */
     display: block;
-    /* Removes any unwanted space below the image */
 }
 
 .they-are-talking {

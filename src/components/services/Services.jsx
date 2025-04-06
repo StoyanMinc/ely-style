@@ -1,10 +1,9 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 
+import useScrollToTop from "../../hooks/useScroll"
+
 export default function Services() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+    useScrollToTop();
     return (
         <div className="services-container">
             <section className="services-nav">

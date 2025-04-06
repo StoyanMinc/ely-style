@@ -1,13 +1,13 @@
 import { useState } from "react"
+import useScrollToTop from "../../hooks/useScroll";
 
 export default function Beauty() {
-
+    useScrollToTop();
     const [lashOptionToShow, setLashOptionToShow] = useState('');
 
     const showLashOptionHandler = (lashOption) => {
         setLashOptionToShow(state => state !== lashOption ? state = lashOption : state = '');
     }
-
     return (
         <div className="beauty-container">
             <section className="beauty-title-section">
