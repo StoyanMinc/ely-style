@@ -160,3 +160,7 @@ h1, p {
     letter-spacing: 1px;
     margin-bottom: 25px;
 }
+
+.next-comment-buttons-container {
+    display: none;
+}

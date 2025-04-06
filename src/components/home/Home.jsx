@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 export default function Home() {
 
     const [imageIndex, setImageIndex] = useState(0);
+    const [commentIndex, setCommentIndex] = useState(0);
 
     const images = [
         `/images/nails1.webp`,
@@ -14,6 +15,20 @@ export default function Home() {
         `/images/nails6.webp`
     ];
 
+    const comments = [
+        {
+            comment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.',
+            author: 'Stoyan M.'
+        },
+        {
+            comment: '2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.',
+            author: 'Stoyan M.'
+        },
+        {
+            comment: '3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.',
+            author: 'Stoyan M.'
+        }
+    ]
     const nextSlide = () => {
         setImageIndex((prevIndex) => (prevIndex + 1) % (images.length - 3)); // Loop back to the first image after the last one (so 4 images are always visible)
     };
@@ -24,12 +39,25 @@ export default function Home() {
         return () => clearInterval(interval); // Cleanup interval when the component unmounts
     }, []);
 
-    // const displayedImages = [
-    //     images[(imageIndex + 0) % images.length],
-    //     images[(imageIndex + 1) % images.length],
-    //     images[(imageIndex + 2) % images.length],
-    //     images[(imageIndex + 3) % images.length]
-    // ];
+    const setPreviusComment = () => {
+        setCommentIndex(prevState => {
+            if (prevState === 0) {
+                return comments.length - 1
+            } else {
+                return prevState - 1;
+            }
+        })
+    }
+
+    const setNextComment = () => {
+        setCommentIndex(prevState => {
+            if (prevState === comments.length - 1) {
+                return 0
+            } else {
+                return prevState + 1;
+            }
+        })
+    }
 
     return (
         <div className="home-container">
@@ -71,7 +99,6 @@ export default function Home() {
                             return (<div key={index} className="image-card">
                                 <img src={image} alt={`Slide ${index + 1}`} />
                             </div>)
-
                         })}
                     </div>
                 </div>
@@ -80,18 +107,16 @@ export default function Home() {
             <section className="they-are-talking">
                 <h1>They're Talking</h1>
                 <div className="comments-container">
+
                     <div className="comment-holder">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.</p>
-                        <span>S.Minchev</span>
+                        <p>{comments[commentIndex]?.comment}</p>
+                        <span>{comments[commentIndex]?.author}</span>
                     </div>
-                    <div className="comment-holder">
-                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.</p>
-                        <span>S.Minchev</span>
-                    </div>
-                    <div className="comment-holder">
-                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.</p>
-                        <span>S.Minchev</span>
-                    </div>
+
+                </div>
+                <div className="next-comment-buttons-container">
+                    <div className="btn-prev-comment" onClick={setPreviusComment}>prev</div>
+                    <div className="btn-next-comment" onClick={setNextComment}>next</div>
                 </div>
             </section>
         </div>
