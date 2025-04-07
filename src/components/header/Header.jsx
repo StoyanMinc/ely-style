@@ -30,7 +30,9 @@ export default function Header() {
                             <li><a className="header-nav-a facebook" href="https://www.facebook.com/elena.mincheva.77" target="_blank" onClick={toggleNav}></a></li>
                             <li><Link className="header-nav-a email" to={'/'} onClick={toggleNav}></Link></li>
                         </div>
-                        <li className="booknow"><Link className="header-nav-a" to={'/'}>book now</Link></li>
+                        <li className="booknow">
+                            <a href="tel:+359895779790" className="header-nav-a">Запази час</a>
+                        </li>
                     </div>
                 </ul>
             </div>

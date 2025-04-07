@@ -76,7 +76,7 @@ export default function Home() {
                     <span>love-your-self</span>
                     <h1> Bring fashion <br /> to your <br />fingertips.</h1>
                     <div className="booknow">
-                        <Link className="header-nav-a">запази час</Link>
+                        <a href="tel:+359895779790" className="header-nav-a">Запази час</a>
                     </div>
                 </div>
             </section>

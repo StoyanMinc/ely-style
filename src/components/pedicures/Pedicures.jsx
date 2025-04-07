@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
-
 import useScrollToTop from "../../hooks/useScroll";
 
 export default function Pedicures() {
-   useScrollToTop();
+    useScrollToTop();
     return (
         <div className="pedicures-container">
             <section className="first-section">
@@ -24,7 +22,9 @@ export default function Pedicures() {
                 <p>Hot stone pedicure | $47</p>
                 <p>Signature spa pedicure | $53</p>
             </section>
-            <Link className="booknow header-nav-a" to={'/'}>book a visit</Link>
+            <div className="booknow">
+                <a href="tel:+359895779790" className="header-nav-a">Запази час</a>
+            </div>
         </div>
     )
 }

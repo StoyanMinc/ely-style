@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function NailArtDesigns() {
-    return( 
+    return (
         <div className="pedicures-container">
             <section className="first-section">
                 <h1>Nail Art & Designs</h1>
@@ -16,8 +16,9 @@ export default function NailArtDesigns() {
                 <p>Velvet nails (1 color)| +$25</p>
                 <p>Chrome (1 color) | +$25</p>
             </section>
-            <Link className="booknow header-nav-a" to={'/'}>book a visit</Link>
-
+            <div className="booknow">
+                <a href="tel:+359895779790" className="header-nav-a">Запази час</a>
+            </div>
         </div>
     )
 }

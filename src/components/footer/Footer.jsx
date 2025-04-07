@@ -10,7 +10,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-info-holder">
                     <span className="footer-info-holder-title">phone</span>
-                    <span>(+359) 899 - 99</span>
+                    <span>(+359) 895 - 779 - 790</span>
                 </div>
                 <div className="footer-info-holder">
                     <span className="footer-info-holder-title">email</span>
@@ -29,7 +29,6 @@ export default function Footer() {
                     <li><Link className="footer-nav-a" to={'/services'}>Services</Link></li>
                     <li><Link className="footer-nav-a" to={'/contacts'}>Contacts</Link></li>
                     <li><Link className="footer-nav-a" to={'/'}>Policies</Link></li>
-                    {/* <li className="booknow"><Link className="footer-nav-a" to={'/'}>book now</Link></li> */}
                 </ul>
             </div>
         </div>
