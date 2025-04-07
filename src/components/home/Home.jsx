@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Home() {
 
     const [imageIndex, setImageIndex] = useState(0);
     const [commentIndex, setCommentIndex] = useState(0);
+    const [direction, setDirection] = useState(1);
 
     const images = [
         `/images/nails1.webp`,
@@ -18,15 +20,18 @@ export default function Home() {
     const comments = [
         {
             comment: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.',
-            author: 'Stoyan M.'
+            author: 'Stoyan M.',
+            id: 1
         },
         {
             comment: '2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.',
-            author: 'Stoyan M.'
+            author: 'Stoyan M.',
+            id: 2
         },
         {
             comment: '3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores similique voluptatem aliquid omnis doloribus sit quibusdam rem repellat perspiciatis veniam laudantium impedit autem suscipit quo a, at fugit ullam magni.',
-            author: 'Stoyan M.'
+            author: 'Stoyan M.',
+            id: 3
         }
     ]
     const nextSlide = () => {
@@ -40,23 +45,12 @@ export default function Home() {
     }, []);
 
     const setPreviusComment = () => {
-        setCommentIndex(prevState => {
-            if (prevState === 0) {
-                return comments.length - 1
-            } else {
-                return prevState - 1;
-            }
-        })
+        setCommentIndex(prevState => prevState === 0 ? comments.length - 1 : prevState - 1);
+        setDirection(-1);
     }
-
     const setNextComment = () => {
-        setCommentIndex(prevState => {
-            if (prevState === comments.length - 1) {
-                return 0
-            } else {
-                return prevState + 1;
-            }
-        })
+        setCommentIndex(prevState => prevState + 1 > comments.length - 1 ? 0 : prevState + 1)
+        setDirection(1)
     }
 
     return (
@@ -107,16 +101,25 @@ export default function Home() {
             <section className="they-are-talking">
                 <h1>They're Talking</h1>
                 <div className="comments-container">
+                    <AnimatePresence mode="wait">
 
-                    <div className="comment-holder">
-                        <p>{comments[commentIndex]?.comment}</p>
-                        <span>{comments[commentIndex]?.author}</span>
-                    </div>
+                        <motion.div
+                            key={comments[commentIndex].id}
+                            className="comment-holder"
+                            initial={{ x: direction * 100, opacity: 0 }}
+                            animate={{ x: 0, opacity: 1 }}
+                            exit={{ x: direction * -100, opacity: 0 }}
+                            transition={{ duration: 0.3}}
+                        >
+                            <p>{comments[commentIndex].comment}</p>
+                            <span>{comments[commentIndex].author}</span>
+                        </motion.div>
+                    </AnimatePresence>
 
                 </div>
                 <div className="next-comment-buttons-container">
-                    <div className="btn-prev-comment" onClick={setPreviusComment}>prev</div>
-                    <div className="btn-next-comment" onClick={setNextComment}>next</div>
+                    <button className="btn-prev-comment" onClick={setPreviusComment}>prev</button>
+                    <button className="btn-next-comment" onClick={setNextComment}>next</button>
                 </div>
             </section>
         </div>

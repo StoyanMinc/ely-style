@@ -161,15 +161,21 @@
     }
 
     .comments-container {
-        flex-direction: column;
+        display: flex;
         align-items: center;
         gap: 20px;
         margin-bottom: 40px;
+        position: relative;
+        scroll-behavior: smooth;
+        overflow: hidden;
     }
 
     .comment-holder {
-        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        min-width: 90%;
         padding: 25px;
+        /* min-height: 150px; */
     }
 
     .next-comment-buttons-container {
