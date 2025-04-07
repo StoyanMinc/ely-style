@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Home() {
 
+    console.log('render');
+    const [isMobile, setIsMobile] = useState(false);
     const [imageIndex, setImageIndex] = useState(0);
     const [commentIndex, setCommentIndex] = useState(0);
     const [direction, setDirection] = useState(1);
@@ -38,6 +40,20 @@ export default function Home() {
         setImageIndex((prevIndex) => (prevIndex + 1) % (images.length - 3)); // Loop back to the first image after the last one (so 4 images are always visible)
     };
 
+    useEffect(() => {
+
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, []);
 
     useEffect(() => {
         const interval = setInterval(nextSlide, 3000); // Change the image every 3 seconds
@@ -101,20 +117,29 @@ export default function Home() {
             <section className="they-are-talking">
                 <h1>They're Talking</h1>
                 <div className="comments-container">
-                    <AnimatePresence mode="wait">
+                    {isMobile ? (
+                        <AnimatePresence mode="wait">
 
-                        <motion.div
-                            key={comments[commentIndex].id}
-                            className="comment-holder"
-                            initial={{ x: direction * 100, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            exit={{ x: direction * -100, opacity: 0 }}
-                            transition={{ duration: 0.3}}
-                        >
-                            <p>{comments[commentIndex].comment}</p>
-                            <span>{comments[commentIndex].author}</span>
-                        </motion.div>
-                    </AnimatePresence>
+                            <motion.div
+                                key={comments[commentIndex].id}
+                                className="comment-holder"
+                                initial={{ x: direction * 100, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                exit={{ x: direction * -100, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <p>{comments[commentIndex].comment}</p>
+                                <span>{comments[commentIndex].author}</span>
+                            </motion.div>
+                        </AnimatePresence>
+                    ) : (
+                        comments.map(comment => (
+                            <div className="comment-holder">
+                                <p>{comment.comment}</p>
+                                <span>{comment.author}</span>
+                            </div>)
+                        )
+                    )}
 
                 </div>
                 <div className="next-comment-buttons-container">
