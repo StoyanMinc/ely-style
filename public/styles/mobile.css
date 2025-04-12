@@ -198,6 +198,14 @@
         cursor: pointer;
     }
 
+    /* GIFT CARDS PAGE */
+    .gift-cards-container .first-section{
+        width: 80%;
+    }
+    .gift-cards-container h1 {
+        font-size: 2.5em;
+    }
+
     /* SERVICES PAGE */
     .services-container {
         padding: 0;

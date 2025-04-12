@@ -14,7 +14,7 @@ export default function Footer() {
                 </div>
                 <div className="footer-info-holder">
                     <span className="footer-info-holder-title">email</span>
-                    <span>abv@.abv</span>
+                    <span className="email-span">elincy@abv.bg</span>
                 </div>
                 <div className="footer-social">
                     <ul>

@@ -20,6 +20,10 @@
     gap: 10px;
 }
 
+.email-span {
+    text-transform:  none;
+}
+
 .footer-info-holder-title {
     font-weight: bold;
     text-decoration: underline;

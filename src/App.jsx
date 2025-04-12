@@ -8,6 +8,7 @@ import Pedicures from "./components/pedicures/Pedicures"
 import NailArtDesigns from "./components/nail-art-designs/NailArtDesigns"
 import Beauty from "./components/beauty/Beauty"
 import Contacts from "./components/contacts/Contacts"
+import GiftCard from "./components/gift-card/GiftCard"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/gift-card" element={<GiftCard />} />
                     <Route path="/services/manicures" element={<Manicures />} />
                     <Route path="/services/pedicures" element={<Pedicures />} />
                     <Route path="/services/nail-art-designs" element={<NailArtDesigns />} />

@@ -20,7 +20,7 @@ export default function Header() {
             <div className={showNav ? 'header-nav-holder show-nav' : 'header-nav-holder'}>
                 <ul>
                     <div className="nav-links-container">
-                        <li className="services-link"><Link className="header-nav-a" to={'/services'} onClick={toggleNav}>Gift cards</Link></li>
+                        <li className="services-link"><Link className="header-nav-a" to={'/gift-card'} onClick={toggleNav}>Gift cards</Link></li>
                         <li className="services-link"><Link className="header-nav-a" to={'/services'} onClick={toggleNav}>Services</Link></li>
                         <li className="contacts-link"><Link className="header-nav-a" to={'/contacts'} onClick={toggleNav}>Contacts</Link></li>
                     </div>
